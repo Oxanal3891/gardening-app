@@ -4,6 +4,7 @@ $(document).ready(function(){
         let plantApiKey = "sk-Jxju658491ed6a8d13552";
         let userPlantInput = $("#userPlantName").val().toLowerCase().trim();
         console.log(userPlantInput);
+        $("#plantsearch").trigger("reset");
         let requestOptions = {
         method: 'GET',
         redirect: 'follow'

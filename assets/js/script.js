@@ -63,12 +63,7 @@ $(document).ready(() => {
     getCurrentWeather();
 });
 
-//Plant search modal: validate and store data upon submit, and reset the form
-$('#plantSearchBtn').click(function () {
-    var userPlantName = $('#userPlantName');
-    var userSciPlantName = $('#userSciPlantName');
-    $("#plantsearch").trigger("reset");
-});
+
 
 //Plant search modal: validation
 
