@@ -33,7 +33,7 @@
 This repository contains a responsive Gardening application that allows the user to search plant care information, weather forecast for 5-day ahead to plan their gardening plans and some Instagram contents related to the searched plant by the user. This App is using a call API's that allowing you to get information on the weather and about plant care. It runs in the browser and has dynamically updated HTML and CSS powered by Javascript/jQuery. This application was built using Dayjs().
 
 The live website has been deployed to
-Github Pages. This project was developed by [Min](https://github.com/ItIsMLiu)[khadijah](https://github.com/Kjhohura24)[Ibrahim](https://github.com/iy2k22)[Rohit](https://github.com/rshaarma) and [Oxana](https://github.com/Oxanal3891) .
+Github Pages. This project was developed by [Min](https://github.com/ItIsMLiu), [khadijah](https://github.com/Kjhohura24), [Ibrahim](https://github.com/iy2k22), [Rohit](https://github.com/rshaarma) and [Oxana](https://github.com/Oxanal3891)
 
 ## Getting Started
 
