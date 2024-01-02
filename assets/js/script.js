@@ -63,19 +63,44 @@ $(document).ready(() => {
     getCurrentWeather();
 });
 
-//Plant search modal: validate and store data upon submit, and reset the form
-$('#plantSearchBtn').click(function () {
-    var userPlantName = $('#userPlantName');
-    var userSciPlantName = $('#userSciPlantName');
-    $("#plantsearch").trigger("reset");
-});
+//Plant  and inspo input modals: validation 
 
-//Plant search modal: validation
+(() => {               //Plant  - at least 3 chars entered
+    const formPlant = document.querySelector('#plantModal');
+    formPlant.addEventListener('submit', (event) => {
+
+        if (!formPlant.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+
+
+        }
+        formPlant.classList.add('was-validated')
+
+
+    })
+
+})();
 
 
 
-//Inspo modal: store data upon submit and reset form
-$('#getinspoBtn').click(function () {
-    $(".form-check-input").removeAttr("checked");
-});
+(() => {   //Inspo  - at least 1 checked
+    const formInspo = document.querySelector('#inspoModal');
+    checked = $("input[type=checkbox]:checked").length;
+    formInspo.addEventListener('submit', (event) => {
+        console.log(checked)
 
+        if (!checked) {
+            formInspo.classList.add('is-invalid')
+            event.preventDefault()
+            event.stopPropagation()
+
+
+
+        }
+
+        formInspo.classList.add('was-validated')
+
+    })
+
+})();
