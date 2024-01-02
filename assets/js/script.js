@@ -63,7 +63,11 @@ $(document).ready(() => {
     getCurrentWeather();
 });
 
+<<<<<<< HEAD
 //Plant  and inspo input modals: validation 
+=======
+
+>>>>>>> e1fa58ffb88b823da3dc22d2adfe22ce77018d7e
 
 (() => {               //Plant  - at least 3 chars entered
     const formPlant = document.querySelector('#plantModal');
