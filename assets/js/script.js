@@ -63,19 +63,43 @@ $(document).ready(() => {
     getCurrentWeather();
 });
 
-//Plant search modal: validate and store data upon submit, and reset the form
-$('#plantSearchBtn').click(function () {
-    var userPlantName = $('#userPlantName');
-    var userSciPlantName = $('#userSciPlantName');
-    $("#plantsearch").trigger("reset");
+(() => {               //Plant  - at least 3 chars entered
+    const formPlant = document.querySelector('#plantModal');
+    formPlant.addEventListener('submit', (event) => {
+        if (!formPlant.checkValidity()) {
+            event.preventDefault();
+            event.stopPropagation();
+        }
+        formPlant.classList.add('was-validated')
+    })
+})();
+
+$('#plantsearchModal').on('hidden.bs.modal', function (e) {
+    $(this)
+        .find("input,text,select")
+        .val('')
+        .end();
+    $("#plantModal").removeClass("was-validated")
 });
 
-//Plant search modal: validation
+function displayMessage (message) {
+    var errorDiv = $("<div>")
+    errorDiv.text("Please Choose at least 1 option.")
+    errorDiv.css({'color': 'red'});
+    $("#inspoModal").append(errorDiv);
+    setTimeout(function() {
+        errorDiv.text('');
+    }, 2000);
+}
 
-
-
-//Inspo modal: store data upon submit and reset form
-$('#getinspoBtn').click(function () {
-    $(".form-check-input").removeAttr("checked");
-});
-
+(() => {   //Inspo  - at least 1 checked
+    const formInspo = document.querySelector('#inspoModal');
+    formInspo.addEventListener('submit', (event) => {
+        var checked = $("input[type=checkbox]:checked").length;
+        if (checked == 0) {
+            event.preventDefault()
+            event.stopPropagation()
+            displayMessage("Please Choose at least 1 option.")
+        }
+    })
+})();
