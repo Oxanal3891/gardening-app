@@ -80,6 +80,13 @@ footer {
   background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba(255,255,255,1.0)'/></svg>");
 }
 
+.form-switch .form-check-input:checked {
+    background-color: var(--Dark-Green);
+    border-color: var(--Light-Green);
+    border: none;
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba(255,255,255,1.0)'/></svg>");
+}
+
 .btn {
   margin-top: 30px;
   padding: 10px;
