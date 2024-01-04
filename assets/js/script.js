@@ -18,7 +18,7 @@ $(document).ready(() => {
                 .then((data) => {
                     const { name } = data[0];
                     $("#city-name").text(` for ${name}`);
-                    return fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}`);
+                    return fetch(`http://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}`);
                 })
                 .then((res) => {
                     if (!res.ok)
@@ -36,7 +36,7 @@ $(document).ready(() => {
                         day.addClass("card-title");
                         day.text(dayjs(forecast.dt_txt).format("dddd, MMMM Do"));
                         const icon = $("<img>");
-                        icon.attr("src", `https://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png`);
+                        icon.attr("src", `http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png`);
                         icon.addClass("card-img-top");
                         icon.attr("alt", forecast.weather[0].description);
                         const temp = $("<p></p>");
