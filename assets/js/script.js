@@ -63,7 +63,9 @@ $(document).ready(() => {
     getCurrentWeather();
 });
 
-(() => {               //Plant  - at least 3 chars entered
+
+//Plant search modal validation
+/*(() => {
     const formPlant = document.querySelector('#plantModal');
     formPlant.addEventListener('submit', (event) => {
         if (!formPlant.checkValidity()) {
@@ -82,17 +84,18 @@ $('#plantsearchModal').on('hidden.bs.modal', function (e) {
     $("#plantModal").removeClass("was-validated")
 });
 
-function displayMessage (message) {
+//Inspo modal validation
+function displayMessage(message) {
     var errorDiv = $("<div>")
     errorDiv.text("Please Choose at least 1 option.")
-    errorDiv.css({'color': 'red'});
+    errorDiv.css({ 'color': 'red' });
     $("#inspoModal").append(errorDiv);
-    setTimeout(function() {
+    setTimeout(function () {
         errorDiv.text('');
     }, 2000);
 }
 
-(() => {   //Inspo  - at least 1 checked
+(() => {
     const formInspo = document.querySelector('#inspoModal');
     formInspo.addEventListener('submit', (event) => {
         var checked = $("input[type=checkbox]:checked").length;
@@ -102,4 +105,14 @@ function displayMessage (message) {
             displayMessage("Please Choose at least 1 option.")
         }
     })
-})();
+})();*/
+
+//Plant search event listener
+$(document).ready(function () {
+    $("#plant-confirm-btn").on("submit", function () {
+        console.log('got here')
+        let userPlantInput = $("#userPlantName").val().toLowerCase().trim();
+        if (userPlantInput.length !== 0)
+            window.location.href = `./pages/plant-result.html?q=${userPlantInput}`;
+    })
+})

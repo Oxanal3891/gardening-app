@@ -28,7 +28,7 @@ $(document).ready(() => {
         const nameEl = $("<h1></h1>");
         nameEl.text(data.common_name);
         const qualList = $("<ul></ul>");
-        
+
         for (let prop of required) {
             const newLi = $("<li></li>");
             const formattedProp = formatProp(prop);
@@ -40,7 +40,7 @@ $(document).ready(() => {
                         newLi.text(data[prop]);
                         break;
                     case 'hardiness':
-                        const {min, max} = data[prop];
+                        const { min, max } = data[prop];
                         const liText = min === max ? `${formattedProp}: Zone ${min}` : `${formattedProp}: Zone ${min} to Zone ${max}`;
                         newLi.text(liText);
                         break;
@@ -62,28 +62,28 @@ $(document).ready(() => {
             $(newBlock).append(imageEl);
         }
         $(newBlock).append(qualList);
-        
+
         $(document.body).append(newBlock);
     }
 
     let requestOptions = {
-    method: 'GET',
-    redirect: 'follow'
+        method: 'GET',
+        redirect: 'follow'
     };
-    
+
     const searchParams = new URLSearchParams(window.location.search);
     const plantId = Number(searchParams.get("id"));
 
     fetch(`https://perenual.com/api/species/details/${plantId}?key=${plantApiKey}`, requestOptions)
-    .then((res) => {
-        if (!res.ok)
-            throw new Error("error occurred");
-        return res.json();
-    })
-    .then((results) => genBlock(results))
-    .catch(() => {
-        const errTxt = $("<h1></h1>");
-        errTxt.text("There was an error fetching the data.");
-        $(document.body).append(errTxt);
-    })
+        .then((res) => {
+            if (!res.ok)
+                throw new Error("error occurred");
+            return res.json();
+        })
+        .then((results) => genBlock(results))
+        .catch(() => {
+            const errTxt = $("<h4></h4>");
+            errTxt.text("There was an error fetching the data.");
+            $('#errorText2').append(errTxt);
+        })
 });
