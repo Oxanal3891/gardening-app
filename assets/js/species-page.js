@@ -78,7 +78,7 @@ $(document).ready(() => {
     }
     $(newBlock).append(qualList);
 
-    $("document.body").append(newBlock);
+    $("plants-species").append(newBlock);
   };
 
   let requestOptions = {
@@ -105,4 +105,3 @@ $(document).ready(() => {
     });
 });
 
-$("plant-species").append(results)
