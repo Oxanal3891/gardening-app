@@ -1,6 +1,6 @@
 //Weather display
 $(document).ready(() => {
-  const apiKey = "sk-w8gg6585d74096b923574";
+  const apiKey = "cf19e26cd84560f303a4c185e64c50ca";
   const forecastDiv = $("#forecast");
 
   const getCurrentWeather = () => {
