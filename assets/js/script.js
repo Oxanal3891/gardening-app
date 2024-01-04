@@ -71,7 +71,7 @@ $(document).ready(() => {
   getCurrentWeather();
 });
 
-/*
+
 //Plant search modal validation
 (() => {
   const formPlant = document.querySelector("#plantModal");
@@ -100,15 +100,3 @@ function displayMessage(message) {
   }, 2000);
 }
 
-(() => {
-  const formInspo = document.querySelector("#inspoModal");
-  formInspo.addEventListener("submit", (event) => {
-    var checked = $("input[type=checkbox]:checked").length;
-    if (checked == 0) {
-      event.preventDefault();
-      event.stopPropagation();
-      displayMessage("Please Choose at least 1 option.");
-    }
-  });
-})();
-*/
