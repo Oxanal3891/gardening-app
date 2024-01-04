@@ -31,7 +31,7 @@ const required = [
 ];
 
 $(document).ready(() => {
-  const plantApiKey = "sk-w8gg6585d74096b923574";
+  const plantApiKey = "sk-ze0Z6596fa1a908483653";
   const genBlock = (data) => {
     const newBlock = $("<div></div>");
     newBlock.attr("id", data.id);
