@@ -65,7 +65,7 @@ $(document).ready(() => {
 
 
 //Plant search modal validation
-/*(() => {
+(() => {
     const formPlant = document.querySelector('#plantModal');
     formPlant.addEventListener('submit', (event) => {
         if (!formPlant.checkValidity()) {
@@ -105,7 +105,7 @@ function displayMessage(message) {
             displayMessage("Please Choose at least 1 option.")
         }
     })
-})();*/
+})();
 
 //Plant search event listener
 $(document).ready(function () {
