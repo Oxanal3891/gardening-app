@@ -23,7 +23,7 @@ $(document).ready(() => {
       } else
         for (let plant of data) {
           console.log(plant);
-          const plantEl = $("<li></li>");
+          const plantEl = $("<h4></h4>");
           plantEl.attr("id", plant.id);
           const link = $("<a></a>");
           link.attr("href", `./species-page.html?id=${plant.id}`);
