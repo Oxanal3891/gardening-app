@@ -1,5 +1,5 @@
 $(document).ready(() => {
-  const plantApiKey = "sk-ze0Z6596fa1a908483653";
+  const plantApiKey = "sk-wkjP6596f7ee38b2c3552";
   let requestOptions = {
     method: "GET",
     redirect: "follow",
