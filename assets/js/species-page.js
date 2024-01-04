@@ -31,7 +31,7 @@ const required = [
 ];
 
 $(document).ready(() => {
-  const plantApiKey = "cf19e26cd84560f303a4c185e64c50ca";
+  const plantApiKey = "sk-w8gg6585d74096b923574";
   const genBlock = (data) => {
     const newBlock = $("<div></div>");
     newBlock.attr("id", data.id);
@@ -78,7 +78,7 @@ $(document).ready(() => {
     }
     $(newBlock).append(qualList);
 
-    $(document.body).append(newBlock);
+    $("document.body").append(newBlock);
   };
 
   let requestOptions = {
@@ -104,3 +104,5 @@ $(document).ready(() => {
       $("#errorText2").append(errTxt);
     });
 });
+
+$("plant-species").append(results)
