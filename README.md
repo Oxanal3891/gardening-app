@@ -1,16 +1,18 @@
 <br />
 
   <h3 align="center">Welcome to Gardening Application</h3>
+  <img width="1427" alt="Screenshot 2024-01-04 at 14 02 51" src="https://github.com/Oxanal3891/gardening-app/assets/64362564/b67dee1d-fc97-4ce8-ab02-6081c2f2e24a">
 
   <p align="center">
     <strong>Explore the docs »</strong>
-    <a href="" target="_blank">Deployed URL</a>
+    <a href="https://oxanal3891.github.io/gardening-app/" target="_blank">Deployed URL</a>
     ·
     <a href="https://github.com/Oxanal3891/gardening-app/issues">Report Bug</a>
     ·
     <a href="https://github.com/Oxanal3891/gardening-app/issues">Request Feature</a>
   </p>
 </p>
+<img width="1321" alt="Screenshot 2024-01-04 at 14 03 32" src="https://github.com/Oxanal3891/gardening-app/assets/64362564/6b1c2a96-ed59-4c0a-87ed-5f6b9cd8cabd">
 
 <!-- TABLE OF CONTENTS -->
 
